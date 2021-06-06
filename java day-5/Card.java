@@ -580,3 +580,13 @@ class DiamondCard extends Cardadapter{
 		super.method30();
 	}
 }
+
+//main class
+public class TestInterfaceFlexibility {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}
+
+}
+
