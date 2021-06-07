@@ -1,6 +1,7 @@
 package com.amazon.producer;
 import java.util.ResourceBundle;
 public class ProducerFactory {
+	private ProducerFactory() { }
 	public static IProducer getProduct() {
 		ResourceBundle rb=ResourceBundle.getBundle("config");
 		String className=rb.getString("producerclass");
