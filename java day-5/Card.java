@@ -1,5 +1,5 @@
 //For makinga Flexible Interface we use adapter class.
-//adapter classes are abstract classes which implements the all the interfaces and then ither classes extends it
+//adapter classes are abstract classes which implements the all the interfaces and then other classes extends it
 public interface Card {
 	void method1();
 	void method2();
