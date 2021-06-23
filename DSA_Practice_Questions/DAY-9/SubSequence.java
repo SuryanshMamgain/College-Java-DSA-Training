@@ -7,7 +7,7 @@ public class SubSequence {
 	static ArrayList<String> getSubSequences(String str){
 		if(str.length()==0) {
 			ArrayList<String> emptyString=new ArrayList<>();
-			emptyString.add(" ");
+			emptyString.add("");
 			return emptyString;
 		}
 		char currentChar=str.charAt(0);
@@ -23,7 +23,7 @@ public class SubSequence {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayList<String> results= getSubSequences("Suru");
+		ArrayList<String> results= getSubSequences("amit");
 		System.out.println(results);
 	}
 
