@@ -1,3 +1,6 @@
+//THIS IS LEETCODE PROBLEM-17
+
+
 import java.util.ArrayList;
 
 public class PhoneNumberCombinations {
@@ -18,14 +21,14 @@ public class PhoneNumberCombinations {
 			char currchar=keyPadKey.charAt(i);
 			ArrayList<String> temp=keyPad(remaining);
 			for(String t:temp) {
-				result.add(t+currchar);
+				result.add(currchar+t);
 			}
 		}
 		return result;
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String phoneNumber="45";
+		String phoneNumber="23";
 		System.out.println(keyPad(phoneNumber));
 	}
 
