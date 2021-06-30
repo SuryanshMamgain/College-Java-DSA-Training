@@ -36,6 +36,24 @@ public class LCS {
 		}
 		return cache[m-1][n-1];
 	}
+	
+	static int lcsCountTabu(String s1,String s2,int m,int n) {
+		int matrix[][]=new int[m+1][n+1];
+		for(int i=0;i<=m;i++) {
+			for(int j=0;j<=n;j++) {
+				if(i==0||j==0) {
+					matrix[i][j]=0;
+				}
+				else if(s1.charAt(i-1)==s2.charAt(j-1)) {
+					matrix[i][j]=1+matrix[i-1][j-1];
+				}
+				else {
+					matrix[i][j]=Math.max(matrix[i-1][j],matrix[i][j-1]);
+				}
+			}
+		}
+		return matrix[m][n];
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s1="ABCDGH";
@@ -43,6 +61,7 @@ public class LCS {
 		int[][] cache=new int[s1.length()][s2.length()];
 		System.out.println(lcsCount(s1,s2));
 		System.out.println(lcsCountMemo(s1, s2, s1.length(), s2.length(),cache));
+		System.out.println(lcsCountTabu(s1, s2, s1.length(), s2.length()));
 	}
 
 }
