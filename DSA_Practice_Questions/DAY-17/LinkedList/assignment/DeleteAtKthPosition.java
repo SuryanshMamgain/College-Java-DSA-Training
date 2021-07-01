@@ -62,6 +62,7 @@ public class DeleteAtKthPosition<T> {
 		// TODO Auto-generated method stub
 		DeleteAtKthPosition d=new DeleteAtKthPosition();
 		Scanner scanner=new Scanner(System.in);
+		outer:
 		while(true) {
 			System.out.println("1. Enter a element");
 			System.out.println("2. Print elements");
@@ -85,9 +86,10 @@ public class DeleteAtKthPosition<T> {
 				break;
 			default:
 				System.out.println("wrong choice, PROGRAM TERMINATED");
-				System.exit(0);
+				break outer;
 			}
 		}
+		scanner.close();
 		
 	}
 
