@@ -1,1 +1,1 @@
-This repo contains Java and DSA questions.
+This repository contains Java and DSA questions.
